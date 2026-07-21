@@ -473,6 +473,30 @@ h1 {
     object-position: center 64%;
   }
 
+  .hero.hero-banner .hero-banner-content {
+    display: contents;
+  }
+
+  .hero.hero-banner .hero-banner-logo {
+    display: none;
+  }
+
+  .hero.hero-banner h1 {
+    order: 1;
+  }
+
+  .hero.hero-banner .hero-text {
+    order: 2;
+  }
+
+  .hero.hero-banner .hero-banner-media {
+    order: 3;
+  }
+
+  .hero.hero-banner .hero-actions {
+    order: 4;
+  }
+
   .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -550,6 +574,23 @@ h1 {
     object-position: center 65%;
   }
 
+  .hero.hero-banner .hero-banner-media {
+    order: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero.hero-banner h1 {
+    order: 2;
+  }
+
+  .hero.hero-banner .hero-text {
+    order: 3;
+  }
+
+  .hero.hero-banner .hero-actions {
+    order: 4;
+  }
+
   .section {
     padding: 58px 0;
   }
@@ -604,8 +645,33 @@ h1 {
 }
 
 @media (max-width: 620px) {
-  .page-hero-image {
+  .groomers-hero .page-hero-content {
+    display: contents;
+  }
+
+  .groomers-hero .page-hero-media {
+    order: 1;
+    margin-bottom: 4px;
+  }
+
+  .groomers-hero .page-hero-image {
     height: min(70vw, 300px);
+  }
+
+  .groomers-hero .eyebrow {
+    order: 2;
+  }
+
+  .groomers-hero h1 {
+    order: 3;
+  }
+
+  .groomers-hero p:not(.eyebrow) {
+    order: 4;
+  }
+
+  .groomers-hero .breadcrumb {
+    order: 5;
   }
 }
 
