@@ -571,12 +571,42 @@ h1 {
 
 
 .page-hero {
-  padding: 58px 0;
-  background: linear-gradient(120deg, var(--cream), var(--sage));
+  padding: 50px 0 42px;
+  background: linear-gradient(135deg, var(--cream), var(--sage));
 }
 
 .page-hero-content {
   max-width: 780px;
+}
+
+.page-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+}
+
+.page-hero-media {
+  border-width: 7px;
+}
+
+.page-hero-image {
+  height: min(38vw, 340px);
+  max-height: 340px;
+  object-position: center 48%;
+}
+
+@media (max-width: 920px) {
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero-image {
+    height: min(56vw, 320px);
+  }
+}
+
+@media (max-width: 620px) {
+  .page-hero-image {
+    height: min(70vw, 300px);
+  }
 }
 
 .breadcrumb {
