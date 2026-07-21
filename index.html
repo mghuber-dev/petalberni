@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PetAlberni is a local pet directory for Port Alberni and the Alberni Valley.">
   <title>PetAlberni | Port Alberni Pet Directory</title>
+  <link rel="icon" href="assets/petalberni-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="PetAlberni home">
-        <span class="brand-mark">🐾</span>
-        <span>Pet<strong>Alberni</strong></span>
+      <a class="brand" href="index.html" aria-label="PetAlberni home">
+        <img class="brand-mark" src="assets/petalberni-logo.svg" alt="" width="52" height="52">
+        <span class="brand-name">Pet<strong>Alberni</strong></span>
       </a>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
@@ -22,103 +23,99 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#suggest">Suggest</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#suggest">Suggest a Business</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Port Alberni & Alberni Valley</p>
-          <h1>Find local pet services with confidence.</h1>
-          <p class="hero-text">PetAlberni is a simple local directory built to help pet owners discover nearby groomers, veterinarians, walkers, trainers, pet shops, rescues, and more.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#categories">Find a Pet Service</a>
-            <a class="button button-secondary" href="#suggest">Suggest a Business</a>
-          </div>
-        </div>
-
-        <div class="hero-card" aria-label="PetAlberni directory preview">
-          <div class="hero-card-top">
-            <span class="status-dot"></span>
-            <span>Community directory in progress</span>
-          </div>
-          <div class="pet-icons" aria-hidden="true">
-            <span>🐶</span>
-            <span>🐱</span>
-            <span>🐰</span>
-          </div>
-          <h2>Built for local pet people.</h2>
-          <p>No real listings are added yet. Phase 1 is the homepage foundation for a future directory.</p>
+    <section class="hero hero-banner" aria-labelledby="hero-title">
+      <img class="hero-banner-image" src="assets/petalberni-hero-dog.jpg" alt="Dog running through autumn leaves outdoors in the Alberni Valley" width="1178" height="1536" fetchpriority="high">
+      <div class="hero-banner-overlay"></div>
+      <div class="container hero-banner-content">
+        <img class="hero-banner-logo" src="assets/petalberni-logo.svg" alt="PetAlberni" width="76" height="76">
+        <h1 id="hero-title">Find the Best Pet Services in the Alberni Valley</h1>
+        <p class="hero-text">Your local guide to trusted veterinarians, groomers, trainers, boarding, pet stores, parks, and more.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#categories">Explore Local Services</a>
+          <a class="button button-secondary" href="#suggest">Add Your Business</a>
         </div>
       </div>
     </section>
 
-    <section class="intro section">
-      <div class="container narrow">
-        <h2>A home base for Alberni Valley pet care.</h2>
-        <p>PetAlberni is being created as a real, easy-to-use guide for local pet owners. The goal is to make it faster to find nearby services and easier for the community to recommend trusted pet-related businesses.</p>
-      </div>
-    </section>
-
-    <section class="section categories" id="categories">
+    <section class="section categories" id="categories" aria-labelledby="categories-title">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Directory preview</p>
-          <h2>Pet service categories</h2>
-          <p>These are the types of listings planned for the directory. Business listings will be added in a later phase.</p>
+          <p class="eyebrow">Start here</p>
+          <h2 id="categories-title">Browse pet service categories</h2>
+          <p>Choose the type of help you need. These categories are the main paths into the PetAlberni directory.</p>
         </div>
 
         <div class="category-grid">
-          <article class="category-card">
+          <a class="category-card" href="veterinarians.html">
             <span class="category-icon">🏥</span>
             <h3>Veterinarians</h3>
-            <p>Clinics, animal hospitals, and wellness care.</p>
-          </article>
-          <article class="category-card">
+            <p>Clinics, animal hospitals, checkups, and wellness care.</p>
+          </a>
+          <a class="category-card" href="groomers.html">
             <span class="category-icon">✂️</span>
-            <h3>Grooming</h3>
-            <p>Bathing, brushing, clipping, and pet spa services.</p>
-          </article>
-          <article class="category-card">
-            <span class="category-icon">🦮</span>
-            <h3>Walking & Sitting</h3>
-            <p>Dog walkers, pet sitters, and drop-in care.</p>
-          </article>
-          <article class="category-card">
-            <span class="category-icon">🎓</span>
-            <h3>Training</h3>
-            <p>Classes, behaviour support, and obedience help.</p>
-          </article>
-          <article class="category-card">
+            <h3>Groomers</h3>
+            <p>Bathing, brushing, clipping, nail trims, and coat care.</p>
+          </a>
+          <a class="category-card" href="pet-stores-supplies.html">
             <span class="category-icon">🛒</span>
-            <h3>Pet Supplies</h3>
-            <p>Food, treats, toys, gear, and everyday essentials.</p>
-          </article>
-          <article class="category-card">
+            <h3>Pet Stores & Supplies</h3>
+            <p>Food, treats, toys, gear, supplements, and essentials.</p>
+          </a>
+          <a class="category-card" href="dog-walkers-pet-sitters.html">
+            <span class="category-icon">🦮</span>
+            <h3>Dog Walkers & Pet Sitters</h3>
+            <p>Walks, drop-ins, vacation care, and in-home support.</p>
+          </a>
+          <a class="category-card" href="trainers.html">
+            <span class="category-icon">🎓</span>
+            <h3>Trainers</h3>
+            <p>Puppy basics, obedience classes, and behaviour support.</p>
+          </a>
+          <a class="category-card" href="boarding-daycare.html">
             <span class="category-icon">🏡</span>
-            <h3>Boarding</h3>
-            <p>Kennels, overnight care, and short-term stays.</p>
-          </article>
+            <h3>Boarding & Daycare</h3>
+            <p>Overnight stays, kennels, daycare, and short-term care.</p>
+          </a>
+          <a class="category-card" href="rescues-adoption.html">
+            <span class="category-icon">❤️</span>
+            <h3>Rescues & Adoption</h3>
+            <p>Local rescues, adoption resources, and animal welfare groups.</p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">About PetAlberni</p>
-          <h2>Local, practical, and easy to browse.</h2>
-        </div>
-        <div class="about-copy">
-          <p>PetAlberni is for people in Port Alberni, Beaver Creek, Sproat Lake, Cherry Creek, and the wider Alberni Valley who want one clear place to start when looking for pet care.</p>
-          <p>This first phase keeps things simple: a polished homepage, clear categories, and a way for the community to suggest businesses before listings are added.</p>
-        </div>
+    <section class="intro section" id="about">
+      <div class="container narrow">
+        <p class="eyebrow">Why PetAlberni exists</p>
+        <h2>A practical home base for local pet care.</h2>
+        <p>Finding pet services should not mean digging through scattered posts, old search results, or word-of-mouth threads. PetAlberni is being built to make local pet care easier to find, easier to compare, and easier for the community to keep up to date.</p>
+      </div>
+    </section>
+
+    <section class="section trust" aria-label="PetAlberni values">
+      <div class="container trust-grid">
+        <article class="trust-item">
+          <h2>Local first</h2>
+          <p>Focused on Port Alberni and the Alberni Valley—not a generic national directory.</p>
+        </article>
+        <article class="trust-item">
+          <h2>Easy to use</h2>
+          <p>Clear categories and plain language help people get to the right service quickly.</p>
+        </article>
+        <article class="trust-item">
+          <h2>Community supported</h2>
+          <p>Local suggestions will help shape which businesses and organizations are added.</p>
+        </article>
       </div>
     </section>
 
@@ -126,8 +123,8 @@
       <div class="container suggest-card">
         <div>
           <p class="eyebrow">Help build the directory</p>
-          <h2>Know a pet business that should be included?</h2>
-          <p>Send a suggestion for a local pet service in Port Alberni or the Alberni Valley. Real listings will be reviewed and added in a future phase.</p>
+          <h2>Know a local pet service that should be included?</h2>
+          <p>Send a suggestion for a pet business, rescue, or animal service in Port Alberni or the Alberni Valley. Listings will be reviewed before being added in a future phase.</p>
         </div>
         <a class="button button-primary" href="mailto:hello@petalberni.ca?subject=PetAlberni%20business%20suggestion">Suggest a Business</a>
       </div>
@@ -136,7 +133,7 @@
     <section class="section contact" id="contact">
       <div class="container narrow">
         <p class="eyebrow">Contact</p>
-        <h2>Questions or suggestions?</h2>
+        <h2>Questions or corrections?</h2>
         <p>Email <a href="mailto:hello@petalberni.ca">hello@petalberni.ca</a> with ideas, corrections, or local pet business suggestions.</p>
       </div>
     </section>
@@ -144,9 +141,9 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p class="brand footer-brand"><span class="brand-mark">🐾</span> Pet<strong>Alberni</strong></p>
-      <p>Local pet directory for Port Alberni and the Alberni Valley.</p>
-      <p>&copy; 2026 PetAlberni. Phase 1 homepage.</p>
+      <p class="brand footer-brand"><img class="brand-mark" src="assets/petalberni-logo.svg" alt="" width="52" height="52"> Pet<strong>Alberni</strong></p>
+      <p>Helping Alberni Valley pet owners find trusted local pet services.</p>
+      <p>&copy; 2026 PetAlberni.</p>
     </div>
   </footer>
 

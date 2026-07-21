@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">PetAlberni Mountain Paw refined logo - teal and gold</title>
+  <desc id="desc">A rounded teal badge with an elegant Vancouver Island mountain silhouette and a clear warm paw mark.</desc>
+  <rect width="96" height="96" rx="26" fill="#F9F1DF"/>
+  <path d="M14 58 34 32c1.6-2.1 4.7-2.1 6.3.1L50 45l7.3-9.1c1.5-1.9 4.3-1.9 5.9-.1L82 58H14Z" fill="#0F7C80"/>
+  <path d="M14 58h68v10c-8.5 6.1-19.9 9.4-34 9.4S22.5 74.1 14 68V58Z" fill="#38A68E"/>
+  <ellipse cx="48" cy="65" rx="9.4" ry="8.2" fill="#F2B84B"/>
+  <circle cx="35.8" cy="59.3" r="4.3" fill="#F2B84B"/>
+  <circle cx="44.2" cy="54" r="4.3" fill="#F2B84B"/>
+  <circle cx="51.8" cy="54" r="4.3" fill="#F2B84B"/>
+  <circle cx="60.2" cy="59.3" r="4.3" fill="#F2B84B"/>
+</svg>

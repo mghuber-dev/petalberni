@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">PetAlberni Mountain Paw refined logo - teal and sky</title>
+  <desc id="desc">A soft sky badge with deep teal mountains, blue inlet shape, and friendly paw mark.</desc>
+  <rect width="96" height="96" rx="28" fill="#E7F6FB"/>
+  <path d="M13 56.5 34.2 31c1.5-1.8 4.3-1.7 5.7.2L49 44l7.2-8.9c1.5-1.8 4.2-1.8 5.7 0L83 56.5H13Z" fill="#176C73"/>
+  <path d="M13 58c7.6 5.4 18.9 8.1 35 8.1S75.4 63.4 83 58v12c-8.3 5.1-20 7.7-35 7.7S21.3 75.1 13 70V58Z" fill="#5EB7D7"/>
+  <ellipse cx="48" cy="64" rx="9.8" ry="8.7" fill="#FFF7EA"/>
+  <circle cx="35.4" cy="58" r="4.2" fill="#FFF7EA"/>
+  <circle cx="43.9" cy="52.4" r="4.2" fill="#FFF7EA"/>
+  <circle cx="52.1" cy="52.4" r="4.2" fill="#FFF7EA"/>
+  <circle cx="60.6" cy="58" r="4.2" fill="#FFF7EA"/>
+</svg>

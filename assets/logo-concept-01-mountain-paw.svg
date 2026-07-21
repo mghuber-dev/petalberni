@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">PetAlberni mountain paw logo concept</title>
+  <desc id="desc">Rounded green badge with stylized Alberni Valley mountains and a subtle paw formed by valley circles.</desc>
+  <rect width="96" height="96" rx="24" fill="#F8F2E6"/>
+  <path d="M17 61 37 31l11 16 9-12 22 26H17Z" fill="#2E6F62"/>
+  <path d="M17 61c13 8 49 8 62 0v10c-15 8-47 8-62 0V61Z" fill="#7E9F7D"/>
+  <circle cx="43" cy="63" r="6" fill="#F8F2E6"/>
+  <circle cx="34" cy="58" r="3.6" fill="#F8F2E6"/>
+  <circle cx="43" cy="54" r="3.6" fill="#F8F2E6"/>
+  <circle cx="52" cy="58" r="3.6" fill="#F8F2E6"/>
+</svg>
