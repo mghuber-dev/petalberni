@@ -171,6 +171,11 @@ a {
   box-shadow: var(--shadow);
 }
 
+.hero.hero-banner .hero-banner-media {
+  border: 0;
+  box-shadow: 0 18px 38px rgba(25, 50, 58, 0.1);
+}
+
 .hero-banner-image {
   width: 100%;
   height: min(48vw, 430px);
@@ -300,38 +305,197 @@ h1 {
 }
 
 .category-card {
-  min-height: 210px;
-  padding: 26px;
-  background: linear-gradient(180deg, var(--white), #fbf8f2);
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  box-shadow: 0 10px 26px rgba(25, 50, 58, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+  min-height: 226px;
+  padding: 30px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), #fbf8f2);
+  border: 1px solid rgba(123, 98, 68, 0.12);
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(25, 50, 58, 0.065);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.category-card::after {
+  position: absolute;
+  inset: auto 18px 18px auto;
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  background: currentColor;
+  content: "";
+  opacity: 0.04;
+  transform: scale(0.86);
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
 
 .category-card:hover,
 .category-card:focus {
-  transform: translateY(-5px);
-  border-color: rgba(39, 124, 106, 0.28);
-  box-shadow: 0 18px 38px rgba(25, 50, 58, 0.11);
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, currentColor 22%, rgba(123, 98, 68, 0.12));
+  box-shadow: 0 20px 40px rgba(25, 50, 58, 0.105);
+}
+
+.category-card:hover::after,
+.category-card:focus::after {
+  opacity: 0.065;
+  transform: scale(1);
 }
 
 .category-icon {
+  position: relative;
   display: inline-grid;
-  width: 58px;
-  height: 58px;
-  margin-bottom: 20px;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 24px;
   place-items: center;
-  background: var(--brand-soft);
-  border-radius: 18px;
-  font-size: 1.65rem;
+  color: currentColor;
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.18) 38%, transparent 62%),
+    linear-gradient(145deg, color-mix(in srgb, currentColor 19%, #ffffff), color-mix(in srgb, currentColor 7%, #ffffff));
+  border: 1px solid color-mix(in srgb, currentColor 16%, rgba(255, 255, 255, 0.88));
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    0 12px 24px rgba(25, 50, 58, 0.08),
+    0 0 0 7px color-mix(in srgb, currentColor 6%, transparent);
+  transition: transform 0.24s cubic-bezier(.2,.8,.2,1), box-shadow 0.24s ease, background 0.24s ease;
+}
+
+.category-icon::after {
+  position: absolute;
+  inset: 9px 11px auto auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  content: "";
+  opacity: 0.9;
+  transition: transform 0.24s ease, opacity 0.24s ease;
+}
+
+.category-icon svg {
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+  filter: drop-shadow(0 2px 3px rgba(25, 50, 58, 0.08));
+}
+
+.category-icon .icon-plate {
+  stroke-width: 1.9;
+}
+
+.category-icon .icon-accent {
+  stroke-width: 2.25;
+}
+
+.category-card:hover .category-icon,
+.category-card:focus .category-icon {
+  transform: translateY(-2px) scale(1.06) rotate(-1deg);
+  background:
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.22) 40%, transparent 64%),
+    linear-gradient(145deg, color-mix(in srgb, currentColor 24%, #ffffff), color-mix(in srgb, currentColor 10%, #ffffff));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    0 16px 30px rgba(25, 50, 58, 0.11),
+    0 0 0 8px color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.category-card:hover .category-icon::after,
+.category-card:focus .category-icon::after {
+  opacity: 1;
+  transform: translate(-2px, 2px) scale(0.86);
+}
+
+.category-icon-image,
+.category-icon-vet-image {
+  width: 84px;
+  height: 84px;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.category-icon-image::after,
+.category-icon-vet-image::after {
+  display: none;
+}
+
+.category-icon-image img,
+.category-icon-vet-image img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 14px rgba(25, 50, 58, 0.12));
+}
+
+.category-card:hover .category-icon-image,
+.category-card:focus .category-icon-image,
+.category-card-vets:hover .category-icon-vet-image,
+.category-card-vets:focus .category-icon-vet-image {
+  background: transparent;
+  box-shadow: none;
+}
+
+.category-page-emblem {
+  width: 76px;
+  height: 76px;
+  margin-bottom: 18px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 14px rgba(25, 50, 58, 0.12));
 }
 
 .category-card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: var(--ink);
   font-size: 1.2rem;
-  letter-spacing: -0.02em;
+  line-height: 1.16;
+  letter-spacing: -0.032em;
 }
+
+.category-card p {
+  max-width: 28ch;
+  font-size: 0.96rem;
+  line-height: 1.62;
+}
+
+.category-card-vets {
+  color: #2f80c8;
+}
+
+.category-card-groomers {
+  color: #0f8f8a;
+}
+
+.category-card-supplies {
+  color: #c58218;
+}
+
+.category-card-walkers {
+  color: #6f8f3d;
+}
+
+.category-card-trainers {
+  color: #7568c8;
+}
+
+.category-card-boarding {
+  color: #3f8a5c;
+}
+
+.category-card-rescue {
+  color: #c95c61;
+}
+
 
 .intro {
   background: var(--cream-2);
@@ -604,6 +768,20 @@ h1 {
     padding: 24px;
   }
 
+  .category-icon-image,
+  .category-icon-vet-image,
+  .category-icon-image img,
+  .category-icon-vet-image img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .category-page-emblem {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 14px;
+  }
+
   .suggest-card {
     padding: 28px;
     border-radius: 24px;
@@ -634,6 +812,10 @@ h1 {
   object-position: center 48%;
 }
 
+.veterinarians-hero-image {
+  object-position: center center;
+}
+
 @media (max-width: 920px) {
   .page-hero-grid {
     grid-template-columns: 1fr;
@@ -645,32 +827,39 @@ h1 {
 }
 
 @media (max-width: 620px) {
-  .groomers-hero .page-hero-content {
+  .groomers-hero .page-hero-content,
+  .veterinarians-hero .page-hero-content {
     display: contents;
   }
 
-  .groomers-hero .page-hero-media {
+  .groomers-hero .page-hero-media,
+  .veterinarians-hero .page-hero-media {
     order: 1;
     margin-bottom: 4px;
   }
 
-  .groomers-hero .page-hero-image {
+  .groomers-hero .page-hero-image,
+  .veterinarians-hero .page-hero-image {
     height: min(70vw, 300px);
   }
 
-  .groomers-hero .eyebrow {
+  .groomers-hero .eyebrow,
+  .veterinarians-hero .eyebrow {
     order: 2;
   }
 
-  .groomers-hero h1 {
+  .groomers-hero h1,
+  .veterinarians-hero h1 {
     order: 3;
   }
 
-  .groomers-hero p:not(.eyebrow) {
+  .groomers-hero p:not(.eyebrow),
+  .veterinarians-hero p:not(.eyebrow) {
     order: 4;
   }
 
-  .groomers-hero .breadcrumb {
+  .groomers-hero .breadcrumb,
+  .veterinarians-hero .breadcrumb {
     order: 5;
   }
 }
