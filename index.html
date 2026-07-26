@@ -23,7 +23,21 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html#categories">Categories</a></li>
+        <li class="nav-mobile-only"><a href="index.html" aria-current="page">Home</a></li>
+        <li class="nav-desktop-only"><a href="index.html#categories">Categories</a></li>
+        <li class="nav-mobile-section" aria-hidden="true">Categories</li>
+        <li class="nav-mobile-only nav-category-item"><a href="veterinarians.html">Veterinarians</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="groomers.html">Groomers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="pet-stores-supplies.html">Pet Supplies</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="dog-walkers-pet-sitters.html">Pet Sitters</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="dog-walkers-pet-sitters.html">Dog Walkers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="trainers.html">Trainers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="boarding-daycare.html">Boarding & Daycare</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="rescues-adoption.html">Rescue & Adoption</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="emergency-after-hours.html">Emergency & After-Hours</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="pet-insurance.html">Pet Insurance</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="parks-beaches.html">Parks & Beaches</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="lost-found.html">Lost & Found</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#suggest">Suggest a Business</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -33,30 +47,19 @@
 
   <main>
     <section class="hero hero-banner" aria-labelledby="hero-title">
-      <div class="container hero-banner-grid">
-        <div class="hero-banner-content">
-          <img class="hero-banner-logo" src="assets/petalberni-logo.png" alt="PetAlberni" width="76" height="76">
+      <div class="hero-banner-grid">
+        <div class="hero-banner-media">
+          <img class="hero-banner-image" src="assets/Quay homepage hero image.png" alt="Pet owners with dogs by the carved fish sculptures at Harbour Quay in Port Alberni" width="1448" height="1086" fetchpriority="high">
+        </div>
+        <div class="container hero-banner-content">
           <h1 id="hero-title">Find the Best Pet Services in the Alberni Valley</h1>
           <p class="hero-text">PetAlberni helps Port Alberni and Alberni Valley pet owners find trusted veterinarians, groomers, trainers, boarding, pet stores, parks, and more.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#categories">Browse Categories</a>
-            <a class="button button-secondary" href="#suggest">Add Your Business</a>
-          </div>
-        </div>
-        <div class="hero-banner-media">
-          <img class="hero-banner-image" src="assets/petalberni-hero-dog.jpg" alt="Dog running through autumn leaves outdoors in the Alberni Valley" width="1178" height="1536" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <section class="section categories" id="categories" aria-labelledby="categories-title">
+    <section class="section categories" id="categories" aria-label="Pet service categories">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Start here</p>
-          <h2 id="categories-title">Browse pet service categories</h2>
-          <p>Choose the type of help you need. These categories are the main paths into the PetAlberni directory.</p>
-        </div>
-
         <div class="category-grid">
           <a class="category-card category-card-vets" href="veterinarians.html">
             <span class="category-icon category-icon-image" aria-hidden="true"><img src="assets/icons/icon-veterinarians.png" alt="" loading="lazy" decoding="async" /></span>
