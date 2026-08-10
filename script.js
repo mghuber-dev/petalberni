@@ -15,3 +15,46 @@ if (navToggle && navMenu) {
     });
   });
 }
+
+const contactForm = document.querySelector('#contactForm');
+
+if (contactForm) {
+  const successMessage = contactForm.querySelector('#contactSuccess');
+  const fields = Array.from(contactForm.querySelectorAll('input, select, textarea'));
+
+  const setFieldState = (field) => {
+    const wrapper = field.closest('.form-field');
+    if (!wrapper) return true;
+
+    const isValid = field.checkValidity();
+    wrapper.classList.toggle('is-invalid', !isValid);
+    field.setAttribute('aria-invalid', String(!isValid));
+    return isValid;
+  };
+
+  fields.forEach((field) => {
+    field.addEventListener('blur', () => setFieldState(field));
+    field.addEventListener('input', () => {
+      if (field.getAttribute('aria-invalid') === 'true') {
+        setFieldState(field);
+      }
+    });
+  });
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formIsValid = fields.every(setFieldState);
+
+    if (!formIsValid) {
+      const firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
+      firstInvalid?.focus();
+      successMessage?.classList.remove('is-visible');
+      return;
+    }
+
+    contactForm.reset();
+    fields.forEach((field) => field.setAttribute('aria-invalid', 'false'));
+    successMessage?.classList.add('is-visible');
+    successMessage?.focus();
+  });
+}

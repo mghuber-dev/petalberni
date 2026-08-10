@@ -324,9 +324,18 @@ h1 {
   padding: 74px 0;
 }
 
+.hero-category-divider {
+  height: 8px;
+  margin: 22px auto 20px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(15, 124, 128, 0.14), rgba(15, 124, 128, 0.72) 32%, rgba(244, 164, 96, 0.72) 68%, rgba(15, 124, 128, 0.14));
+  box-shadow: 0 10px 26px rgba(15, 124, 128, 0.14);
+}
+
 .categories {
-  padding-top: 8px;
-  background: var(--white);
+  position: relative;
+  padding-top: 14px;
+  background: linear-gradient(180deg, #f5fbf8 0%, var(--white) 74px);
 }
 
 .section-heading {
@@ -650,6 +659,161 @@ h1 {
   box-shadow: inset 0 -0.12em 0 var(--brand-soft);
 }
 
+
+.contact-page-hero {
+  padding: 54px 0 30px;
+  background: linear-gradient(180deg, var(--cream), var(--cream-2));
+}
+
+.contact-page-intro {
+  max-width: 790px;
+}
+
+.contact-page-intro h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.15rem, 4.5vw, 3.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.contact-page-intro p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.contact-page-intro p + p {
+  margin-top: 10px;
+}
+
+.contact-page-section {
+  padding-top: 34px;
+  background: var(--cream-2);
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form-heading {
+  margin-bottom: 4px;
+}
+
+.contact-form-heading h2,
+.contact-business-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.45rem;
+}
+
+.contact-form-heading p,
+.contact-business-card p {
+  color: var(--muted);
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.form-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(15, 124, 128, 0.46);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(15, 124, 128, 0.1);
+  outline: 0;
+}
+
+.form-field.is-invalid input,
+.form-field.is-invalid select,
+.form-field.is-invalid textarea {
+  border-color: #b45309;
+  box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.1);
+}
+
+.form-error {
+  display: none;
+  color: #8a3b07;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.form-field.is-invalid .form-error {
+  display: block;
+}
+
+.form-success {
+  display: none;
+  padding: 14px 16px;
+  border: 1px solid rgba(15, 124, 128, 0.18);
+  border-radius: 18px;
+  color: var(--brand-dark);
+  background: var(--brand-soft);
+  font-weight: 700;
+}
+
+.form-success.is-visible {
+  display: block;
+}
+
+.contact-business-card {
+  position: sticky;
+  top: 106px;
+  background: linear-gradient(180deg, var(--white), #fff8eb);
+}
+
+.contact-paw {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  font-size: 1.35rem;
+}
+
+.button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(15, 124, 128, 0.28);
+  outline-offset: 3px;
+}
+
 .site-footer {
   padding: 42px 0;
   background: var(--ink);
@@ -887,7 +1051,8 @@ h1 {
   }
 
   .categories {
-    padding-top: 10px;
+    padding-top: 18px;
+    background: linear-gradient(180deg, #f5fbf8 0%, var(--white) 58px);
   }
 
   .category-grid {
@@ -1444,8 +1609,13 @@ h1 {
 
 @media (max-width: 920px) {
   .listing-layout,
-  .logo-concept-grid {
+  .logo-concept-grid,
+  .contact-page-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-business-card {
+    position: static;
   }
 
   .emergency-contact-actions,
@@ -1459,6 +1629,26 @@ h1 {
 }
 
 @media (max-width: 620px) {
+  .contact-page-hero {
+    padding: 38px 0 20px;
+  }
+
+  .contact-page-section {
+    padding-top: 24px;
+  }
+
+  .contact-form,
+  .contact-business-card {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    min-height: 54px;
+  }
+
   .emergency-contacts-section {
     padding-top: 26px;
   }

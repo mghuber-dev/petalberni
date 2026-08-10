@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact PetAlberni with questions, corrections, local pet service suggestions, or business listing updates for Port Alberni and the Alberni Valley.">
+  <title>Contact Us | PetAlberni</title>
+  <link rel="icon" href="assets/petalberni-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="PetAlberni home">
+        <img class="brand-mark" src="assets/petalberni-logo.png" alt="" width="52" height="52">
+        <span class="brand-name">Pet<strong>Alberni</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-mobile-only"><a href="index.html">Home</a></li>
+        <li class="nav-desktop-only"><a href="index.html#categories">Categories</a></li>
+        <li class="nav-mobile-section" aria-hidden="true">Categories</li>
+        <li class="nav-mobile-only nav-category-item"><a href="veterinarians.html">Veterinarians</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="groomers.html">Groomers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="pet-stores-supplies.html">Pet Supplies</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="dog-walkers-pet-sitters.html">Pet Sitters</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="dog-walkers-pet-sitters.html">Dog Walkers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="trainers.html">Trainers</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="boarding-daycare.html">Boarding & Daycare</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="rescues-adoption.html">Rescue & Adoption</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="emergency-after-hours.html">Emergency & After-Hours</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="pet-insurance.html">Pet Insurance</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="parks-beaches.html">Parks & Beaches</a></li>
+        <li class="nav-mobile-only nav-category-item"><a href="lost-found.html">Lost & Found</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#suggest">Suggest a Business</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-page-hero" aria-labelledby="contact-title">
+      <div class="container contact-page-intro">
+        <a class="breadcrumb" href="index.html">← Back to home</a>
+        <p class="eyebrow">Contact</p>
+        <h1 id="contact-title">Contact PetAlberni</h1>
+        <p>Have a question, suggestion, correction, or know about a great local pet service we should include? We’d love to hear from you.</p>
+        <p>PetAlberni is a local Port Alberni pet resource designed to help people find useful pet-related businesses, services, and information in the Alberni Valley.</p>
+      </div>
+    </section>
+
+    <section class="section contact-page-section" aria-label="Contact PetAlberni form">
+      <div class="container contact-page-grid">
+        <form class="business-card contact-form" id="contactForm" novalidate>
+          <div class="contact-form-heading">
+            <h2>Send a message</h2>
+            <p>Share a few details and we’ll review your note. Please do not include urgent medical information here—contact a veterinarian directly for pet health concerns.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" autocomplete="name" required aria-describedby="contactNameError">
+            <p class="form-error" id="contactNameError">Please enter your name.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" autocomplete="email" required aria-describedby="contactEmailError">
+            <p class="form-error" id="contactEmailError">Please enter a valid email address.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactReason">Reason for contacting us</label>
+            <select id="contactReason" name="reason" required aria-describedby="contactReasonError">
+              <option value="">Select a reason</option>
+              <option>Suggest a business or service</option>
+              <option>Update or correct a listing</option>
+              <option>Business owner inquiry</option>
+              <option>Website feedback</option>
+              <option>General question</option>
+              <option>Other</option>
+            </select>
+            <p class="form-error" id="contactReasonError">Please choose a reason.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="6" required aria-describedby="contactMessageError"></textarea>
+            <p class="form-error" id="contactMessageError">Please add a short message.</p>
+          </div>
+
+          <button class="button button-primary" type="submit">Send Message</button>
+          <p class="form-success" id="contactSuccess" role="status" tabindex="-1">Thanks—your message has been received. We appreciate your help keeping PetAlberni useful for local pet owners.</p>
+        </form>
+
+        <aside class="directory-note contact-business-card" aria-labelledby="business-owner-title">
+          <span class="contact-paw" aria-hidden="true">🐾</span>
+          <h2 id="business-owner-title">Own a local pet business?</h2>
+          <p>Business owners can contact PetAlberni to request a new listing, correct information, update services, or provide better photos and details for an existing listing.</p>
+          <p>Our goal is to keep the directory friendly, accurate, and useful for pet owners across Port Alberni and the Alberni Valley.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="brand footer-brand"><img class="brand-mark" src="assets/petalberni-logo.png" alt="" width="52" height="52"> Pet<strong>Alberni</strong></p>
+      <p>Helping Alberni Valley pet owners find trusted local pet services.</p>
+      <p>&copy; 2026 PetAlberni.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
