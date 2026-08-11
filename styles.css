@@ -1187,6 +1187,16 @@ textarea:focus-visible {
   object-position: center center;
 }
 
+.trainers-hero-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.boarding-hero-image {
+  object-fit: cover;
+  object-position: center center;
+}
+
 @media (max-width: 920px) {
   .page-hero-grid {
     grid-template-columns: 1fr;
