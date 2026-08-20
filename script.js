@@ -41,7 +41,7 @@ if (contactForm) {
     });
   });
 
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const formIsValid = fields.every(setFieldState);
 
@@ -49,6 +49,18 @@ if (contactForm) {
       const firstInvalid = contactForm.querySelector('[aria-invalid="true"]');
       firstInvalid?.focus();
       successMessage?.classList.remove('is-visible');
+      return;
+    }
+
+    const response = await fetch(contactForm.action, {
+      method: contactForm.method,
+      body: new FormData(contactForm),
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
       return;
     }
 
